@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+
+# 中间产物（信号汇集）不入库；weights.json 与 predictions_log.json 是模型状态，需保留
+backend/data/output/sim-signals.json

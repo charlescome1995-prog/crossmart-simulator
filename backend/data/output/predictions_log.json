@@ -1,0 +1,147 @@
+[
+  {
+    "at": "2026-06-23T19:58:59.218680",
+    "model_version": 1,
+    "opportunity_score": 62.4,
+    "predicted": null,
+    "input_snapshot": {
+      "competitor_count": 18,
+      "ops": {
+        "natural_pct": 88.0,
+        "ad_pct": 23.8,
+        "ad_competition_summary": "The market is keyword-dense and split between strong organic incumbents and aggressive ad attackers. SimplyVital and CHARMPOO are leaning heavily on ads, while Globe variants rely mainly on organic/recommendation traffic, so a new or weaker listing needs disciplined CPC harvesting plus organic rank building rather than broad spend.",
+        "review_praise": [
+          "Backpack: very lightweight and packable, folds into its own pouch for travel.",
+          "Backpack: durable/sturdy enough for long trips, day hikes, and repeated use.",
+          "Backpack: useful compartments, lots of pockets, and enough room for travel essentials.",
+          "Backpack: water-resistant/waterproof features are a clear purchase driver.",
+          "Deodorant: strong, perfume-like scent that many buyers love and say lasts all day."
+        ],
+        "review_pain": [
+          "Backpack: zipper failure appears as a serious dissatisfaction trigger, even with light use.",
+          "Backpack: lack of zippered interior pockets limits organization/security for some users.",
+          "Backpack: potential fulfillment/QC issue with customer receiving an apparently used item.",
+          "Deodorant: fragrance can be too strong/potent, with one review mentioning asthma flare.",
+          "Deodorant: irritation risk, including rash, itching, and worsening dark underarms."
+        ],
+        "review_opportunities": [
+          "For backpacks, emphasize upgraded zippers, reinforced stress points, and durability testing in listing images and bullets.",
+          "Add or highlight secure zippered interior pockets, laptop/tablet compatibility, water bottle storage, and travel organization.",
+          "Use clear new-product packaging/QC messaging to reduce concerns about used or returned inventory.",
+          "For deodorant, offer or position a sensitive-skin/fragrance-balanced version, with clear patch-test guidance and realistic brightening claims."
+        ]
+      }
+    },
+    "actual": null
+  },
+  {
+    "at": "2026-06-23T19:59:59.776501",
+    "model_version": 1,
+    "opportunity_score": 62.4,
+    "predicted": {
+      "monthly_sales": 2352,
+      "price": 21.34,
+      "revenue": 50191.68,
+      "cost_breakdown": {
+        "referral_fee": 7528.75,
+        "fba_fee": 10584.0,
+        "cogs": 12547.92,
+        "ad_cost": 15057.5
+      },
+      "total_cost": 45718.18,
+      "net_profit": 4473.5,
+      "profit_margin_pct": 8.9,
+      "asin": "B0013YYNDM",
+      "title": "HERITAGE STORE Organic Castor Oil - Glass Bottle - Nourishing Treatment for Hair and Skin - Eyelash Serum for Eyelashes,",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    "input_snapshot": {
+      "competitor_count": 18,
+      "ops": {
+        "natural_pct": 88.0,
+        "ad_pct": 23.8,
+        "ad_competition_summary": "The market is keyword-dense and split between strong organic incumbents and aggressive ad attackers. SimplyVital and CHARMPOO are leaning heavily on ads, while Globe variants rely mainly on organic/recommendation traffic, so a new or weaker listing needs disciplined CPC harvesting plus organic rank building rather than broad spend.",
+        "review_praise": [
+          "Backpack: very lightweight and packable, folds into its own pouch for travel.",
+          "Backpack: durable/sturdy enough for long trips, day hikes, and repeated use.",
+          "Backpack: useful compartments, lots of pockets, and enough room for travel essentials.",
+          "Backpack: water-resistant/waterproof features are a clear purchase driver.",
+          "Deodorant: strong, perfume-like scent that many buyers love and say lasts all day."
+        ],
+        "review_pain": [
+          "Backpack: zipper failure appears as a serious dissatisfaction trigger, even with light use.",
+          "Backpack: lack of zippered interior pockets limits organization/security for some users.",
+          "Backpack: potential fulfillment/QC issue with customer receiving an apparently used item.",
+          "Deodorant: fragrance can be too strong/potent, with one review mentioning asthma flare.",
+          "Deodorant: irritation risk, including rash, itching, and worsening dark underarms."
+        ],
+        "review_opportunities": [
+          "For backpacks, emphasize upgraded zippers, reinforced stress points, and durability testing in listing images and bullets.",
+          "Add or highlight secure zippered interior pockets, laptop/tablet compatibility, water bottle storage, and travel organization.",
+          "Use clear new-product packaging/QC messaging to reduce concerns about used or returned inventory.",
+          "For deodorant, offer or position a sensitive-skin/fragrance-balanced version, with clear patch-test guidance and realistic brightening claims."
+        ]
+      }
+    },
+    "actual": null
+  },
+  {
+    "at": "2026-06-23T20:06:19.524534",
+    "model_version": 1,
+    "opportunity_score": 62.4,
+    "predicted": {
+      "monthly_sales": 2352,
+      "price": 21.34,
+      "revenue": 50191.68,
+      "cost_breakdown": {
+        "referral_fee": 7528.75,
+        "fba_fee": 10584.0,
+        "cogs": 12547.92,
+        "ad_cost": 15057.5
+      },
+      "total_cost": 45718.18,
+      "net_profit": 4473.5,
+      "profit_margin_pct": 8.9,
+      "asin": "B0013YYNDM",
+      "title": "HERITAGE STORE Organic Castor Oil - Glass Bottle - Nourishing Treatment for Hair and Skin - Eyelash Serum for Eyelashes,",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    "input_snapshot": {
+      "competitor_count": 18,
+      "ops": {
+        "natural_pct": 88.0,
+        "ad_pct": 23.8,
+        "ad_competition_summary": "The market is keyword-dense and split between strong organic incumbents and aggressive ad attackers. SimplyVital and CHARMPOO are leaning heavily on ads, while Globe variants rely mainly on organic/recommendation traffic, so a new or weaker listing needs disciplined CPC harvesting plus organic rank building rather than broad spend.",
+        "review_praise": [
+          "Backpack: very lightweight and packable, folds into its own pouch for travel.",
+          "Backpack: durable/sturdy enough for long trips, day hikes, and repeated use.",
+          "Backpack: useful compartments, lots of pockets, and enough room for travel essentials.",
+          "Backpack: water-resistant/waterproof features are a clear purchase driver.",
+          "Deodorant: strong, perfume-like scent that many buyers love and say lasts all day."
+        ],
+        "review_pain": [
+          "Backpack: zipper failure appears as a serious dissatisfaction trigger, even with light use.",
+          "Backpack: lack of zippered interior pockets limits organization/security for some users.",
+          "Backpack: potential fulfillment/QC issue with customer receiving an apparently used item.",
+          "Deodorant: fragrance can be too strong/potent, with one review mentioning asthma flare.",
+          "Deodorant: irritation risk, including rash, itching, and worsening dark underarms."
+        ],
+        "review_opportunities": [
+          "For backpacks, emphasize upgraded zippers, reinforced stress points, and durability testing in listing images and bullets.",
+          "Add or highlight secure zippered interior pockets, laptop/tablet compatibility, water bottle storage, and travel organization.",
+          "Use clear new-product packaging/QC messaging to reduce concerns about used or returned inventory.",
+          "For deodorant, offer or position a sensitive-skin/fragrance-balanced version, with clear patch-test guidance and realistic brightening claims."
+        ]
+      }
+    },
+    "actual": null
+  }
+]

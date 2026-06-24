@@ -1,0 +1,445 @@
+{
+  "generated_at": "2026-06-23T20:06:19.524534",
+  "opportunity_score": 62.4,
+  "dimension_scores": {
+    "market_demand": 12.8,
+    "competition_intensity": 64.3,
+    "listing_quality": 60,
+    "offsite_potential": 50,
+    "price_positioning": 100,
+    "review_moat": 90
+  },
+  "dimension_weights": {
+    "market_demand": 0.2,
+    "competition_intensity": 0.2,
+    "listing_quality": 0.15,
+    "offsite_potential": 0.1,
+    "price_positioning": 0.15,
+    "review_moat": 0.2
+  },
+  "profit_forecasts": [
+    {
+      "monthly_sales": 2352,
+      "price": 21.34,
+      "revenue": 50191.68,
+      "cost_breakdown": {
+        "referral_fee": 7528.75,
+        "fba_fee": 10584.0,
+        "cogs": 12547.92,
+        "ad_cost": 15057.5
+      },
+      "total_cost": 45718.18,
+      "net_profit": 4473.5,
+      "profit_margin_pct": 8.9,
+      "asin": "B0013YYNDM",
+      "title": "HERITAGE STORE Organic Castor Oil - Glass Bottle - Nourishing Treatment for Hair and Skin - Eyelash Serum for Eyelashes,",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 1497,
+      "price": 4.85,
+      "revenue": 7260.45,
+      "cost_breakdown": {
+        "referral_fee": 1089.07,
+        "fba_fee": 6736.5,
+        "cogs": 1815.11,
+        "ad_cost": 2178.13
+      },
+      "total_cost": 11818.82,
+      "net_profit": -4558.37,
+      "profit_margin_pct": -62.8,
+      "asin": "B013PGADAW",
+      "title": "Globe Clotrimazole Antifungal Cream 1% USP (1 oz), Anti Fungal Treatment, Relieves Itching, Burning, Cracking and Scalin",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 2630,
+      "price": 6.49,
+      "revenue": 17068.7,
+      "cost_breakdown": {
+        "referral_fee": 2560.3,
+        "fba_fee": 11835.0,
+        "cogs": 4267.18,
+        "ad_cost": 5120.61
+      },
+      "total_cost": 23783.09,
+      "net_profit": -6714.39,
+      "profit_margin_pct": -39.3,
+      "asin": "B015HNGLJS",
+      "title": "Globe Clotrimazole Antifungal Cream 1% USP (1 oz), Anti Fungal Treatment, Relieves Itching, Burning, Cracking and Scalin",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 10872,
+      "price": 9.99,
+      "revenue": 108611.28,
+      "cost_breakdown": {
+        "referral_fee": 16291.69,
+        "fba_fee": 48924.0,
+        "cogs": 27152.82,
+        "ad_cost": 32583.38
+      },
+      "total_cost": 124951.9,
+      "net_profit": -16340.62,
+      "profit_margin_pct": -15.0,
+      "asin": "B01NALN8Q9",
+      "title": "Kate Blanc Cosmetics Castor Oil Organic for Hair, Lashes, Face, Skin (2oz), 100% Pure, Cold Pressed, Hexane Free Hair Oi",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 5216,
+      "price": 9.99,
+      "revenue": 52107.84,
+      "cost_breakdown": {
+        "referral_fee": 7816.18,
+        "fba_fee": 23472.0,
+        "cogs": 13026.96,
+        "ad_cost": 15632.35
+      },
+      "total_cost": 59947.49,
+      "net_profit": -7839.65,
+      "profit_margin_pct": -15.0,
+      "asin": "B0734849YK",
+      "title": "Handcraft Blends Organic Castor Oil 16 Fl Oz | 100% Pure and Natural | Premium Grade Carrier Oil | Hair, Eyelashes and E",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 337,
+      "price": 7.99,
+      "revenue": 2692.63,
+      "cost_breakdown": {
+        "referral_fee": 403.89,
+        "fba_fee": 1516.5,
+        "cogs": 673.16,
+        "ad_cost": 807.79
+      },
+      "total_cost": 3401.34,
+      "net_profit": -708.71,
+      "profit_margin_pct": -26.3,
+      "asin": "B0C6Y478R5",
+      "title": "Majestic Pure Oil - 100% Pure and Natural- Cold Pressed & Hexane Free Natural Hair Growth Oil for Eyelashes, Eyebrows, S",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 84,
+      "price": 27.97,
+      "revenue": 2349.48,
+      "cost_breakdown": {
+        "referral_fee": 352.42,
+        "fba_fee": 378.0,
+        "cogs": 587.37,
+        "ad_cost": 704.84
+      },
+      "total_cost": 2022.64,
+      "net_profit": 326.84,
+      "profit_margin_pct": 13.9,
+      "asin": "B0C7VP8SFV",
+      "title": "SimplyVital 1% Clotrimazole Antifungal Cream - Treats Most Athlete's Foot, Jock Itch, Ringworm - Athletes Foot Treatment",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 277,
+      "price": 8.99,
+      "revenue": 2490.23,
+      "cost_breakdown": {
+        "referral_fee": 373.53,
+        "fba_fee": 1246.5,
+        "cogs": 622.56,
+        "ad_cost": 747.07
+      },
+      "total_cost": 2989.66,
+      "net_profit": -499.43,
+      "profit_margin_pct": -20.1,
+      "asin": "B0CMXF1NK3",
+      "title": "Batana Oil - 100% Pure & Natural from Honduras for Hair Growth, Eliminates Split Ends, Enhances Radiance & Nourishment f",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 67,
+      "price": 22.95,
+      "revenue": 1537.65,
+      "cost_breakdown": {
+        "referral_fee": 230.65,
+        "fba_fee": 301.5,
+        "cogs": 384.41,
+        "ad_cost": 461.29
+      },
+      "total_cost": 1377.86,
+      "net_profit": 159.79,
+      "profit_margin_pct": 10.4,
+      "asin": "B0CTX77NHH",
+      "title": "CHARMPOO Antifungal Cream, 2% Miconazole for Jock Itch, Athlete’s Foot & Ringworm, Fast-Absorbing Anti Fungal Skin Cream",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 79,
+      "price": 9.99,
+      "revenue": 789.21,
+      "cost_breakdown": {
+        "referral_fee": 118.38,
+        "fba_fee": 355.5,
+        "cogs": 197.3,
+        "ad_cost": 236.76
+      },
+      "total_cost": 907.95,
+      "net_profit": -118.74,
+      "profit_margin_pct": -15.0,
+      "asin": "B0D98XM5C9",
+      "title": "Miconazole Antifungal Cream for Skin - 4 oz of Miconazole Nitrate for Jock Itch, Athlete's Foot, Itching, and Ringworm",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 161,
+      "price": 27.99,
+      "revenue": 4506.39,
+      "cost_breakdown": {
+        "referral_fee": 675.96,
+        "fba_fee": 724.5,
+        "cogs": 1126.6,
+        "ad_cost": 1351.92
+      },
+      "total_cost": 3878.97,
+      "net_profit": 627.42,
+      "profit_margin_pct": 13.9,
+      "asin": "B0D9PP29TJ",
+      "title": "Florisan USDA Certified Organic Castor Oil 16oz Glass Bottle, Cold Pressed, Hexane-Free, Non-GMO, Vegan, 100% Pure Casto",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 941,
+      "price": 12.99,
+      "revenue": 12223.59,
+      "cost_breakdown": {
+        "referral_fee": 1833.54,
+        "fba_fee": 4234.5,
+        "cogs": 3055.9,
+        "ad_cost": 3667.08
+      },
+      "total_cost": 12791.01,
+      "net_profit": -567.42,
+      "profit_margin_pct": -4.6,
+      "asin": "B0DBLCYTZ6",
+      "title": "Botanic Hearth Batana Oil for Hair Growth & Hair Treatment Oils 4 Fl Oz | Dr Sebi Inspired, 100% Raw & Pure Batana Oil |",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 204,
+      "price": 24.97,
+      "revenue": 5093.88,
+      "cost_breakdown": {
+        "referral_fee": 764.08,
+        "fba_fee": 918.0,
+        "cogs": 1273.47,
+        "ad_cost": 1528.16
+      },
+      "total_cost": 4483.72,
+      "net_profit": 610.16,
+      "profit_margin_pct": 12.0,
+      "asin": "B0DCX7628T",
+      "title": "Lebanta Raw Batana Oil for Hair - 100% Pure, Organic 4oz Batana from Honduras for Fuller, Thicker-Looking Hair - Unrefin",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 57,
+      "price": 16.31,
+      "revenue": 929.67,
+      "cost_breakdown": {
+        "referral_fee": 139.45,
+        "fba_fee": 256.5,
+        "cogs": 232.42,
+        "ad_cost": 278.9
+      },
+      "total_cost": 907.27,
+      "net_profit": 22.4,
+      "profit_margin_pct": 2.4,
+      "asin": "B0DJ1THRXM",
+      "title": "Natural Riches Unrefined Organic Batana Oil, 8 fl oz, 100% Pure & Natural, Cold pressed Honduras Miracle Oil for Hair Gr",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 29,
+      "price": 24.95,
+      "revenue": 723.55,
+      "cost_breakdown": {
+        "referral_fee": 108.53,
+        "fba_fee": 130.5,
+        "cogs": 180.89,
+        "ad_cost": 217.06
+      },
+      "total_cost": 636.98,
+      "net_profit": 86.57,
+      "profit_margin_pct": 12.0,
+      "asin": "B0DJDPLV53",
+      "title": "Clean Nutra Organic Sea Moss Capsules with Ashwagandha, Black Seed Oil, Burdock Root, Bladderwrack, Moringa, Chlorella, ",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 84,
+      "price": 14.99,
+      "revenue": 1259.16,
+      "cost_breakdown": {
+        "referral_fee": 188.87,
+        "fba_fee": 378.0,
+        "cogs": 314.79,
+        "ad_cost": 377.75
+      },
+      "total_cost": 1259.41,
+      "net_profit": -0.25,
+      "profit_margin_pct": -0.0,
+      "asin": "B0DSHY2T4Q",
+      "title": "WEEMOTD 100% Raw Batana Oil for Hair, Unrefined Conditioning Hair & Scalp Oil from Honduras, Moisturizing Hair Mask for ",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 147,
+      "price": 9.99,
+      "revenue": 1468.53,
+      "cost_breakdown": {
+        "referral_fee": 220.28,
+        "fba_fee": 661.5,
+        "cogs": 367.13,
+        "ad_cost": 440.56
+      },
+      "total_cost": 1689.47,
+      "net_profit": -220.94,
+      "profit_margin_pct": -15.0,
+      "asin": "B0DW3YH4WH",
+      "title": "Batana Oil for Hair Growth, 100% Natural Pure Batana Oil Paste from Dr. Sebi Honduras, Prevents Hair Loss, Enhances Thic",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    },
+    {
+      "monthly_sales": 10,
+      "price": 21.99,
+      "revenue": 219.9,
+      "cost_breakdown": {
+        "referral_fee": 32.98,
+        "fba_fee": 45.0,
+        "cogs": 54.97,
+        "ad_cost": 65.97
+      },
+      "total_cost": 198.93,
+      "net_profit": 20.97,
+      "profit_margin_pct": 9.5,
+      "asin": "B0FVSS8SR1",
+      "title": "Antifungal Cream for Athletes Foot Treatment 60g | Relief from Jock Itch Ringworm & Skin Fungus, Advanced Dual Action Fo",
+      "sales_basis": {
+        "from_bsr": null,
+        "from_reviews": null,
+        "method": "fallback_total_reviews(low_confidence)"
+      }
+    }
+  ],
+  "profit_summary": {
+    "monthly_sales": 2352,
+    "price": 21.34,
+    "revenue": 50191.68,
+    "cost_breakdown": {
+      "referral_fee": 7528.75,
+      "fba_fee": 10584.0,
+      "cogs": 12547.92,
+      "ad_cost": 15057.5
+    },
+    "total_cost": 45718.18,
+    "net_profit": 4473.5,
+    "profit_margin_pct": 8.9,
+    "asin": "B0013YYNDM",
+    "title": "HERITAGE STORE Organic Castor Oil - Glass Bottle - Nourishing Treatment for Hair and Skin - Eyelash Serum for Eyelashes,",
+    "sales_basis": {
+      "from_bsr": null,
+      "from_reviews": null,
+      "method": "fallback_total_reviews(low_confidence)"
+    }
+  },
+  "mentor": {
+    "verdict": "CAUTION — The opportunity is moderate at 62.4, but profit is thin at 8.9% margin and the forecast is low-confidence.",
+    "profit_outlook": "The forecast shows $50,191.68 monthly revenue from 2,352 units at $21.34, but only $4,473.50 net profit remains after $45,718.18 total cost. Profitability is sensitive because ad cost is $15,057.50 and the stated profit margin is only 8.9%.",
+    "strategy": [
+      "Run this as a controlled test, not a full inventory bet, because model_confidence is only 0.3, calibration_count is 0, and sales_basis uses fallback_total_reviews(low_confidence).",
+      "Do not compete mainly on price against the $9.99 castor oil competitors; the forecast ASIN is priced at $21.34, so justify the premium with glass bottle, organic, hair, skin, and eyelash-use positioning shown in the title.",
+      "Use tightly controlled PPC harvesting rather than broad campaigns, because ad_cost is forecast at $15,057.50, ad_pct is 23.8%, and the ad summary says the market is keyword-dense with aggressive ad attackers.",
+      "Prioritize organic rank building through listing conversion and exact keyword relevance, because natural_pct is 88.0% and the ad summary says some incumbents rely mainly on organic/recommendation traffic.",
+      "Differentiate with trust and quality proof, because top competitors have very strong review moats: 25,557 reviews for HERITAGE STORE, 56,704 for Handcraft Blends, and 118,169 for Kate Blanc Cosmetics.",
+      "Validate the niche and keyword set manually before launch, because the competitor set mixes castor oil and antifungal cream ASINs, while ops review signals mention backpacks and deodorant rather than castor oil."
+    ],
+    "risks": [
+      "Sales estimate risk is high because monthly sales are based on fallback_total_reviews(low_confidence), with no BSR or review-growth basis.",
+      "Margin risk is high because the forecast profit margin is only 8.9% after $15,057.50 in ad cost.",
+      "Competitive moat risk is high because leading listings show ratings of 4.5 to 4.8 and review counts up to 118,169.",
+      "Data-quality risk is material because review_praise, review_pain, and review_opportunities reference backpacks and deodorant, not the castor oil product."
+    ],
+    "confidence_note": "Trust this verdict only as a directional screen because model_confidence is 0.3 and calibration_count is 0."
+  },
+  "model": {
+    "version": 1,
+    "confidence": 0.3,
+    "calibration_count": 0
+  }
+}

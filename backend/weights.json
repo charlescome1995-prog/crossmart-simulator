@@ -1,0 +1,33 @@
+{
+  "_comment": "CrossMart Simulator 可进化参数。calibration.py 会随真实数据回流自动微调，并在 history 里记录每次调整理由。",
+  "version": 1,
+  "updated_at": null,
+  "calibration_count": 0,
+  "confidence": 0.3,
+  "dimension_weights": {
+    "market_demand": 0.20,
+    "competition_intensity": 0.20,
+    "listing_quality": 0.15,
+    "offsite_potential": 0.10,
+    "price_positioning": 0.15,
+    "review_moat": 0.20
+  },
+  "profit_model": {
+    "amazon_referral_fee_pct": 0.15,
+    "fba_fee_per_unit": 4.5,
+    "cogs_pct_of_price": 0.25,
+    "default_acos": 0.30,
+    "_comment": "佣金按品类约15%；FBA单件费按中小件估；COGS默认占售价25%；广告费=营收*ACOS"
+  },
+  "sales_estimation": {
+    "bsr_to_monthly_sales_curve": {
+      "_comment": "BSR -> 月销量的粗估锚点（品类相关，校准会调整）。线性插值。",
+      "anchors": [[1, 30000], [10, 12000], [50, 5000], [100, 3000], [500, 800], [1000, 400], [5000, 100], [10000, 40], [50000, 8]]
+    },
+    "review_rate_pct": 2.0,
+    "_comment2": "review_rate_pct: 约2%的买家会留评，用评论增速反推销量做交叉校验"
+  },
+  "history": [
+    {"version": 1, "at": "init", "reason": "初始参数，凭经验设定，confidence=0.3，待真实数据校准"}
+  ]
+}

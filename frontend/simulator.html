@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrossMart - Profit Simulator</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Times New Roman",Times,"PingFang SC","Microsoft YaHei",serif;background:#eaeded;color:#0f1111;font-size:14px;min-height:100vh}
+.topbar{background:linear-gradient(135deg,#131921 0%,#232f3e 100%);color:white;padding:10px 20px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2);flex-wrap:wrap}
+.topbar .logo{font-weight:700;font-size:15px;letter-spacing:.5px}
+.topbar a{color:#ccc;text-decoration:none;padding:5px 12px;border-radius:6px;font-size:13px;transition:all .2s}
+.topbar a:hover{background:rgba(255,255,255,.1);color:#fff}
+.topbar a.active{background:#7c3aed;color:white}
+.filters{background:white;padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #d5d9d9;position:sticky;top:48px;z-index:99}
+.filters .badge{background:#7c3aed;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.filters .stat{color:#555;font-size:12px}
+.filters .hint{font-size:11px;color:#999;margin-left:8px}
+.section{margin:16px 16px 0}
+.section-title{font-size:15px;font-weight:700;color:#232f3e;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.section-title .sub{font-size:11px;font-weight:400;color:#999}
+.card{background:white;border:1px solid #d5d9d9;border-radius:10px;overflow:hidden;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.card-body{padding:14px 16px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.kpi{background:#f7fafc;border:1px solid #e6e8ea;border-radius:8px;padding:12px;text-align:center}
+.kpi .val{font-size:20px;font-weight:700;color:#232f3e}
+.kpi .lbl{font-size:11px;color:#777;margin-top:3px;text-transform:uppercase;letter-spacing:.4px}
+
+/* Opportunity gauge */
+.gauge-wrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.gauge{width:120px;height:120px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:white;font-weight:700;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.gauge .score{font-size:32px;line-height:1}
+.gauge .lbl{font-size:11px;opacity:.9;margin-top:3px}
+.dims{flex:1;min-width:240px}
+.dim-row{margin-bottom:8px}
+.dim-row .dl{display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:2px}
+.dim-bar{height:10px;background:#eef0f2;border-radius:5px;overflow:hidden}
+.dim-bar .fill{height:100%;background:linear-gradient(90deg,#7c3aed,#a855f7);border-radius:5px}
+
+/* Verdict */
+.verdict{font-size:16px;font-weight:700;padding:12px 16px;border-radius:8px;margin-bottom:12px}
+.verdict.go{background:#ecfdf5;color:#067d62;border:1px solid #a7f3d0}
+.verdict.caution{background:#fffbeb;color:#b45309;border:1px solid #fde68a}
+.verdict.avoid{background:#fef2f2;color:#b91c1c;border:1px solid #fecaca}
+
+/* Profit table */
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{background:#fafafa;text-align:left;padding:8px 10px;border-bottom:2px solid #e6e8ea;color:#555;font-weight:600}
+.tbl td{padding:8px 10px;border-bottom:1px solid #f0f2f2}
+.tbl tr:last-child td{border-bottom:none}
+.tbl .asin{color:#007185;font-weight:600}
+.tbl .pos{color:#067d62;font-weight:700}
+.tbl .neg{color:#b91c1c;font-weight:700}
+
+.ai-summary{font-size:14px;line-height:1.6;color:#0f1111;background:#f7fafc;padding:12px 14px;border-radius:8px;border:1px solid #e6e8ea;margin-bottom:12px}
+.ai-block{margin-bottom:12px}
+.ai-block h4{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#7c3aed;margin-bottom:6px}
+.ai-block.alerts h4{color:#b91c1c}
+.ai-item{font-size:13px;line-height:1.5;padding:7px 12px;border-left:3px solid #7c3aed;background:#faf8ff;margin-bottom:5px;border-radius:0 6px 6px 0}
+.ai-block.alerts .ai-item{border-left-color:#e94560;background:#fef2f2}
+.conf-bar{height:14px;background:#eef0f2;border-radius:7px;overflow:hidden;margin-top:6px}
+.conf-bar .fill{height:100%;background:linear-gradient(90deg,#7c3aed,#22c55e)}
+.loading{text-align:center;padding:40px;color:#999}
+.empty{text-align:center;padding:40px;color:#94a3b8}
+@media(max-width:768px){.filters{top:44px;padding:8px 10px}.tbl{font-size:11px}.tbl th,.tbl td{padding:6px}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="logo">🔮 CrossMart Simulator</span>
+  <a href="https://charlescome1995-prog.github.io/crossmart-selector/selection.html" target="_top">🎯 Selector</a>
+  <a href="https://charlescome1995-prog.github.io/crossmart-listing/listing.html" target="_top">📝 Listing</a>
+  <a href="https://charlescome1995-prog.github.io/crossmart-monitor/monitor.html" target="_top">📊 Monitor</a>
+  <a href="https://charlescome1995-prog.github.io/crossmart-ops/ops.html" target="_top">📈 Ops</a>
+  <a href="simulator.html" class="active">🔮 Simulator</a>
+</div>
+
+<div class="filters">
+  <span class="badge">Profit Simulator</span>
+  <span class="stat" id="genTime"></span>
+  <span class="hint">Profit forecast + self-evolving mentor · synthesizes Monitor/Ops/Selector signals</span>
+</div>
+
+<div id="content">
+  <div class="loading">Loading simulation...</div>
+</div>
+
+<script>
+var DATA = null;
+function esc(s){ return String(s==null?'':s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }
+function money(v){ if(v==null) return '—'; return '$' + Number(v).toLocaleString(undefined,{maximumFractionDigits:0}); }
+
+function loadData(){
+  fetch('data/sim-data.json?_=' + Date.now())
+    .then(function(r){ if(!r.ok) throw new Error('no data'); return r.json(); })
+    .then(function(d){ DATA = d; render(); })
+    .catch(function(){
+      document.getElementById('content').innerHTML =
+        '<div class="empty">No simulation data yet.<br>Run <code>python backend/run_simulator.py</code> then push.</div>';
+    });
+}
+
+function gaugeColor(s){ return s>=70?'#067d62':(s>=50?'#f59e0b':'#e94560'); }
+
+function renderOpportunity(){
+  var s = DATA.opportunity_score||0;
+  var dims = DATA.dimension_scores||{};
+  var w = DATA.dimension_weights||{};
+  var labels = {market_demand:'Market Demand',competition_intensity:'Competition (inv)',listing_quality:'Listing Quality',offsite_potential:'Offsite Potential',price_positioning:'Price Positioning',review_moat:'Review Moat'};
+  var h = '<div class="gauge-wrap"><div class="gauge" style="background:'+gaugeColor(s)+'"><div class="score">'+s+'</div><div class="lbl">OPPORTUNITY</div></div><div class="dims">';
+  Object.keys(labels).forEach(function(k){
+    var v = dims[k]||0; var wt = w[k]?(' · w'+Math.round(w[k]*100)+'%'):'';
+    h += '<div class="dim-row"><div class="dl"><span>'+labels[k]+wt+'</span><span>'+v+'</span></div><div class="dim-bar"><div class="fill" style="width:'+Math.min(100,v)+'%"></div></div></div>';
+  });
+  h += '</div></div>';
+  return h;
+}
+
+function renderProfit(){
+  var f = DATA.profit_forecasts||[];
+  if(!f.length) return '<div class="empty">No profit forecast.</div>';
+  var ps = DATA.profit_summary;
+  var h = '';
+  if(ps){
+    h += '<div class="kpi-grid" style="margin-bottom:12px">'
+      + '<div class="kpi"><div class="val">'+ps.monthly_sales+'</div><div class="lbl">Est. Monthly Units</div></div>'
+      + '<div class="kpi"><div class="val">'+money(ps.revenue)+'</div><div class="lbl">Monthly Revenue</div></div>'
+      + '<div class="kpi"><div class="val '+(ps.net_profit>=0?'pos':'neg')+'">'+money(ps.net_profit)+'</div><div class="lbl">Net Profit</div></div>'
+      + '<div class="kpi"><div class="val '+(ps.profit_margin_pct>=0?'pos':'neg')+'">'+ps.profit_margin_pct+'%</div><div class="lbl">Profit Margin</div></div>'
+      + '</div>';
+  }
+  h += '<table class="tbl"><thead><tr><th>ASIN</th><th>Units/mo</th><th>Revenue</th><th>Ad Cost</th><th>Net Profit</th><th>Margin</th></tr></thead><tbody>';
+  f.slice(0,15).forEach(function(x){
+    var cb = x.cost_breakdown||{};
+    h += '<tr><td class="asin">'+esc(x.asin)+'</td><td>'+x.monthly_sales+'</td><td>'+money(x.revenue)+'</td><td>'+money(cb.ad_cost)+'</td>'
+      + '<td class="'+(x.net_profit>=0?'pos':'neg')+'">'+money(x.net_profit)+'</td><td class="'+(x.profit_margin_pct>=0?'pos':'neg')+'">'+x.profit_margin_pct+'%</td></tr>';
+  });
+  h += '</tbody></table>';
+  h += '<div style="font-size:11px;color:#999;margin-top:8px">Model: revenue − (referral 15% + FBA + COGS + ad spend). Sales est. from BSR + review velocity, fallback to review-base when unavailable.</div>';
+  return h;
+}
+
+function renderMentor(){
+  var m = DATA.mentor||{};
+  var h = '';
+  if(m.verdict){
+    var v = m.verdict.toLowerCase();
+    var cls = v.indexOf('go')===0?'go':(v.indexOf('avoid')===0?'avoid':'caution');
+    h += '<div class="verdict '+cls+'">'+esc(m.verdict)+'</div>';
+  }
+  if(m.profit_outlook) h += '<div class="ai-summary">'+esc(m.profit_outlook)+'</div>';
+  function block(title, items, cls){
+    if(!items||!items.length) return '';
+    var b = '<div class="ai-block '+(cls||'')+'"><h4>'+title+'</h4>';
+    items.forEach(function(it){ b += '<div class="ai-item">'+esc(it)+'</div>'; });
+    return b+'</div>';
+  }
+  h += block('📋 Strategy (evidence-based)', m.strategy);
+  h += block('⚠️ Risks', m.risks, 'alerts');
+  if(m.confidence_note) h += '<div style="font-size:12px;color:#777;margin-top:8px;font-style:italic">'+esc(m.confidence_note)+'</div>';
+  if(!h) h = '<div class="empty">No mentor verdict.</div>';
+  return h;
+}
+
+function renderModel(){
+  var mo = DATA.model||{};
+  var conf = (mo.confidence||0)*100;
+  return '<div class="kpi-grid">'
+    + '<div class="kpi"><div class="val">v'+(mo.version||1)+'</div><div class="lbl">Model Version</div></div>'
+    + '<div class="kpi"><div class="val">'+(mo.calibration_count||0)+'</div><div class="lbl">Calibrations</div></div>'
+    + '<div class="kpi"><div class="val">'+conf.toFixed(0)+'%</div><div class="lbl">Confidence</div></div>'
+    + '</div><div class="conf-bar"><div class="fill" style="width:'+conf+'%"></div></div>'
+    + '<div style="font-size:11px;color:#999;margin-top:8px">Confidence rises as real Monitor outcomes are fed back and the model self-calibrates (weights & params auto-tuned, every change logged with a reason).</div>';
+}
+
+function render(){
+  if(DATA.generated_at) document.getElementById('genTime').textContent = 'Generated: ' + DATA.generated_at.replace('T',' ').slice(0,19);
+  var html = ''
+    + '<div class="section"><div class="section-title">🎯 Opportunity Score <span class="sub">6-dimension weighted</span></div>'
+    + '<div class="card"><div class="card-body">' + renderOpportunity() + '</div></div></div>'
+    + '<div class="section"><div class="section-title">💰 Profit Forecast <span class="sub">transparent model</span></div>'
+    + '<div class="card"><div class="card-body">' + renderProfit() + '</div></div></div>'
+    + '<div class="section"><div class="section-title">🧠 Mentor Verdict <span class="sub">evidence-based strategy</span></div>'
+    + '<div class="card"><div class="card-body">' + renderMentor() + '</div></div></div>'
+    + '<div class="section"><div class="section-title">📈 Model Self-Evolution <span class="sub">confidence grows with real data</span></div>'
+    + '<div class="card"><div class="card-body">' + renderModel() + '</div></div></div>';
+  document.getElementById('content').innerHTML = html;
+}
+
+loadData();
+</script>
+</body>
+</html>
