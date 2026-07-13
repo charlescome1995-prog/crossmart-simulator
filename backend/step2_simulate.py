@@ -284,6 +284,45 @@ def run_step2(signals=None, with_ai=True):
 
     print(f"  ✅ 模拟完成 → {out}")
     print(f"     机会分 {score} / 盈利预测 {len(forecasts)} 项 / 置信度 {weights.get('confidence')}")
+
+    # ── 推送到 CrossMart Hub ───────────────────────────────────
+    try:
+        import datetime as _dt
+        from push_to_hub import push_to_hub
+        _predictions = []
+        for f in forecasts:
+            _predictions.append({
+                'asin': f.get('asin'),
+                'title': f.get('title'),
+                'predicted_at': _dt.datetime.now(
+                    _dt.timezone(_dt.timedelta(hours=8))
+                ).strftime('%Y-%m-%d'),
+                'predicted_monthly_units': f.get('monthly_units'),
+                'predicted_monthly_revenue': f.get('monthly_revenue'),
+                'predicted_net_profit': f.get('net_profit'),
+                'predicted_net_margin': f.get('net_margin'),
+                'sales_basis': f.get('sales_basis'),
+                'actual_units': None,
+                'actual_net_margin': None,
+                'calibration_status': 'pending',
+            })
+        _payload = {
+            'schema_version': 'v1',
+            'generated_at': _dt.datetime.now(
+                _dt.timezone(_dt.timedelta(hours=8))
+            ).isoformat(timespec='seconds'),
+            'source': 'crossmart-simulator',
+            'model_version': weights.get('version'),
+            'model_confidence': weights.get('confidence'),
+            'opportunity_score': score,
+            'dimension_scores': dims,
+            'predictions': _predictions,
+        }
+        push_to_hub('predictions.json', _payload)
+        print('🌐 已同步到 crossmart-hub/data/predictions.json')
+    except Exception as e:
+        print(f'⚠️ Hub 同步失败（不阻塞主流程）: {e}')
+
     return result
 
 
